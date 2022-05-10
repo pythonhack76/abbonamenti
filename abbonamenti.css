@@ -1,0 +1,13 @@
+.blocco_nav_title {
+
+    margin-top: 20px;
+    margin-left: 40px; 
+}
+
+.footer {
+
+    margin-bottom: 0;
+    padding: 0; 
+}
+
+#bottom {background: grey; color: white;}
