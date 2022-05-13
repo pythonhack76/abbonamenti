@@ -12,8 +12,12 @@
 <body>
 <header><?php include('menu_nav.php'); ?></header>
     
+<div class="container">
+    <h1>Test</h1>
+    <?php include ('login.php'); ?>
+</div>
 
-<?php include('footer.php'); ?>
+<?php include('footer-service.php'); ?>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

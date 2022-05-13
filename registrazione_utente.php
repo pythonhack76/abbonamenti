@@ -2,10 +2,14 @@
 require_once('connect.php');
 
 if (isset($_POST['register'])) {
-    $username = $_POST['username'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $alias = $_POST['alias'] ?? '';
     $password = $_POST['password'] ?? '';
+    $marketing = $_POST['marketing'] ?? '';
+    $privacy = $_POST['privacy'] ?? '';
+
     $isUsernameValid = filter_var(
-        $username,
+        $alias,
         FILTER_VALIDATE_REGEXP, [
             "options" => [
                 "regexp" => "/^[a-z\d_]{3,20}$/i"
@@ -14,10 +18,10 @@ if (isset($_POST['register'])) {
     );
     $pwdLenght = mb_strlen($password);
     
-    if (empty($username) || empty($password)) {
+    if ( empty($email) || empty($alias) || empty($password) || empty($privacy)) {
         $msg = 'Compila tutti i campi %s';
     } elseif (false === $isUsernameValid) {
-        $msg = 'Lo username non è valido. Sono ammessi solamente caratteri 
+        $msg = 'Lo alias non è valido. Sono ammessi solamente caratteri 
                 alfanumerici e l\'underscore. Lunghezza minina 3 caratteri.
                 Lunghezza massima 20 caratteri';
     } elseif ($pwdLenght < 8 || $pwdLenght > 20) {
@@ -28,18 +32,18 @@ if (isset($_POST['register'])) {
 
         $query = "
             SELECT id
-            FROM users
-            WHERE username = :username
+            FROM abbonati
+            WHERE alias = :alias
         ";
         
         $check = $pdo->prepare($query);
-        $check->bindParam(':username', $username, PDO::PARAM_STR);
+        $check->bindParam(':alias', $alias, PDO::PARAM_STR);
         $check->execute();
         
         $user = $check->fetchAll(PDO::FETCH_ASSOC);
         
         if (count($user) > 0) {
-            $msg = 'Username già in uso %s';
+            $msg = 'Alias già in uso %s';
         } else {
             $query = "
                 INSERT INTO abbonati
@@ -47,8 +51,11 @@ if (isset($_POST['register'])) {
             ";
         
             $check = $pdo->prepare($query);
-            $check->bindParam(':username', $username, PDO::PARAM_STR);
+            $check->bindParam(':email', $email, PDO::PARAM_STR);
+            $check->bindParam(':alias', $alias, PDO::PARAM_STR);
             $check->bindParam(':password', $password_hash, PDO::PARAM_STR);
+            $check->bindParam(':marketing', $marketing, PDO::PARAM_STR);
+            $check->bindParam(':privacy', $privacy, PDO::PARAM_STR);
             $check->execute();
             
             if ($check->rowCount() > 0) {
@@ -59,5 +66,5 @@ if (isset($_POST['register'])) {
         }
     }
     
-    printf($msg, '<a href="../register.html">torna indietro</a>');
+    printf($msg, '<a href="sottoscrivi.php">torna indietro</a>');
 }
