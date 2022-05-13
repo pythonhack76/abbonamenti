@@ -11,7 +11,7 @@
 <body>
 <header><?php include('menu_nav.php'); ?></header>
     <div class="container-fluid">
-  <h1>Sottoscrivi Abbonamenti</h1>
+  <h1 class="">Sottoscrivi Abbonamenti</h1>
     <form>
   <div class="row mb-3">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
@@ -74,3 +74,6 @@
 
 </body>
 </html>
+
+
+

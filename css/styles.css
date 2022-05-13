@@ -1,0 +1,19 @@
+
+.privacy_content {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    
+    text-align: justify;
+    text-justify: inter-world;
+}
+
+
+
+/* impostazioni media screen */
+
+@media only screen and (max-width: 574px) {
+    body {
+        background-color: lightgrey;
+    }
+}
