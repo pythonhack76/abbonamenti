@@ -25,16 +25,36 @@ echo $title;
     <div class="blocco_nav_title">
         <h1 class="sub-title"><i class="bi bi-alarm"></i></i>Abbonamenti Stagione <?php $data = Date('Y'); echo $data; ?></h1>
     </div>
-    <div class="container-fluid">
-
-    <p>Cards Profilo</p>
-    <div class="cards-profile"><?php include('card-profile.php'); ?></div>
+    <div class="container">
+  
+</div>
 
 
     </div>
+    </div>
     <button onclick="dimensioneWindow();">Dimensione</button>
 
- <?php include('footer.php'); ?>
+    <div class="container">
+  <div class="row">
+    <div class="col-sm"><p id="card">Cards Profilo</p>
+    <div class="cards-profile"><?php include('card-profile.php'); ?></div> </div>
+    <div class="col-sm"> <p id="card">Cards Profilo</p>
+    <div class="cards-profile"><?php include('card-profile.php'); ?></div></div>
+    <div class="col-sm"><p id="card">Cards Profilo</p>
+    <div class="cards-profile"><?php include('card-profile.php'); ?></div></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm"><p id="card">Cards Profilo</p>
+    <div class="cards-profile"><?php include('card-profile.php'); ?></div> </div>
+    <div class="col-sm"> <p id="card">Cards Profilo</p>
+    <div class="cards-profile"><?php include('card-profile.php'); ?></div></div>
+    <div class="col-sm"><p id="card">Cards Profilo</p>
+    <div class="cards-profile"><?php include('card-profile.php'); ?></div></div>
+  </div>
+</div>
+
+ <?php include('footer-service.php'); ?>
 <!-- JavaScript Bundle with Popper -->
 <script src="./js/functions.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

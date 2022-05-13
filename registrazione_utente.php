@@ -1,6 +1,7 @@
 <?php
 require_once('connect.php');
 
+
 if (isset($_POST['register'])) {
     $email = $_POST['email'] ?? '';
     $alias = $_POST['alias'] ?? '';

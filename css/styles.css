@@ -8,6 +8,22 @@
     text-justify: inter-world;
 }
 
+.container-fluid {
+    display: inline-flex;
+}
+
+
+#card {
+    font-weight: 800;
+    color: red;
+}
+
+.subtitle {
+
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
 
 
 /* impostazioni media screen */
