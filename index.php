@@ -21,7 +21,7 @@ echo $title;
 <title>Abbonamenti <?php $keys; ?></title>
 </head>
 <body>
-    <header><?php include('menu_nav.php'); ?></header>
+<header><?php include('header.php'); ?></header>
     <div class="blocco_nav_title">
         <h1 class="sub-title"><i class="bi bi-alarm"></i></i>Abbonamenti Stagione <?php $data = Date('Y'); echo $data; ?></h1>
     </div>

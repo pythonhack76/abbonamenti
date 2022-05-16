@@ -1,5 +1,45 @@
 <?php
 
+function choiseImg() {
+  //recupero indirizzo url
+  $nome_pagina = $_SERVER['REQUEST_URI'];
+  //scompongo indirizzo
+  $n_pagina = explode('/', $nome_pagina);  
+  //echo $nome_pagina; 
+  
+  //recupero dall'array ultimo elemento
+  $last_word = end($n_pagina);  
+   
+  // foreach($n_pagina as $pagina){
+  //     echo $pagina . "<br>";
+  // }
+  //creo lo switch utilizzando il parametro del dato recuperato relativo alla url pagina
+  $page = $last_word; 
+  switch($page){
+    case 'template.php':
+      echo "<img src='./immagini/sticker.jpg' width='100%' height='auto'>";
+      break;
+    case 'home.php':
+      echo "<img src='./immagini/register-no.jpg' width='100%' height='auto>";
+      break;
+    case 'sottoscrivi.php':
+      echo "<img src='./immagini/3d-rendering.jpg' width='100%' height='auto'>";
+      break;
+    case 'update.php':
+      echo "<img src='./immagini/hand.jpg' width='100%' height='auto'>";
+      break;
+      case 'index.php':
+      echo "<img src='./immagini/woman.jpg' width='100%' height='auto'>";
+      break;
+    default:
+    echo "nessuna pagina selezionata!";
+    break;
+    
+  
+  }
+
+}
+
 $the_company ='LRVLSoft';
 
 function modTitle() {
@@ -51,4 +91,7 @@ $sidebar_right = '<button class="btn btn-primary" type="button" data-bs-toggle="
     ...
   </div>
 </div>';
+
+
+
 ?>

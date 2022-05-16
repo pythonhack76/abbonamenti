@@ -1,9 +1,8 @@
-
 <?php
+include_once ('functions.php');
 
-$immagine = "<img class='banner-header' src='./immagini/sticker.jpg' width='100%'>";
+choiseImg(); 
 
-echo $immagine; 
 
 include ('menu_nav.php');
 
