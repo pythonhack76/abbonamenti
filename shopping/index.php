@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Shopping</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Benvenuti nello Shopping</h1>
@@ -25,7 +25,19 @@
             <h5 class="card-title">Prodotto Uno</h5>
             <h6>
                 <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
             </h6>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nisi dolores provident facere, ex quod ullam veritatis neque at eveniet incidunt recusandae ipsa, ducimus fugit, exercitationem cum corrupti quia sint?
+            </p>
+            <h5>
+                <small><s class="text-secondary">€ 599</s></small>
+                <span class="price">€ 499</span>
+            </h5>
+            <button type="submit" class="btn btn-warning my-3" name="add">Aggiungi<i class="fas fa-shopping-cart"></i></button>
         </div>
     
 </div>
