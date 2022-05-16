@@ -1,0 +1,1 @@
+<?php $ok = 'tutto ok'; echo $ok; ?>

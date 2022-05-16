@@ -2,12 +2,14 @@
 require_once('connect.php');
 
 
-if (isset($_POST['register'])) {
+if (isset($_POST['submit'])) {
     $email = $_POST['email'] ?? '';
     $alias = $_POST['alias'] ?? '';
     $password = $_POST['password'] ?? '';
     $marketing = $_POST['marketing'] ?? '';
     $privacy = $_POST['privacy'] ?? '';
+
+    //echo $email . '<br>' .  $alias . '<br>' . '<br>' .  $password . '<br>' . '<br>' . $marketing . '<br>' . $privacy; 
 
     $isUsernameValid = filter_var(
         $alias,
@@ -16,10 +18,11 @@ if (isset($_POST['register'])) {
                 "regexp" => "/^[a-z\d_]{3,20}$/i"
             ]
         ]
-    );
+            );
+
     $pwdLenght = mb_strlen($password);
-    
-    if ( empty($email) || empty($alias) || empty($password) || empty($privacy)) {
+    // || empty($alias) || empty($password) || empty($privacy)
+    if ( empty($email) ) {
         $msg = 'Compila tutti i campi %s';
     } elseif (false === $isUsernameValid) {
         $msg = 'Lo alias non è valido. Sono ammessi solamente caratteri 

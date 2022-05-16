@@ -1,14 +1,3 @@
-<?php
-include ('functions.php');
-
-$title = "Abbonamenti";
-
-
-echo $title; 
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

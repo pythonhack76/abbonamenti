@@ -12,6 +12,9 @@
     <a class="nav-link" href="index.php">Ultime News</a>
   </li>
   <li class="nav-item">
+    <a class="nav-link" href="pricing.php">Lisitino</a>
+  </li>
+  <li class="nav-item">
     <a class="nav-link">Cancella Abbonamento</a>
   </li>
 </ul>

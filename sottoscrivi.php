@@ -1,8 +1,8 @@
 <?php 
 
-//include('registrazione_utente.php');
+include('registrazione_utente.php');
 
-$alias = $_POST['alias'];
+
 
 ?>
 <!DOCTYPE html>
@@ -20,42 +20,42 @@ $alias = $_POST['alias'];
     <div class="container-fluid">
   <h1 class="h1-header">Sottoscrivi Abbonamenti</h1>
   <h4>Registrati gratuitamente per poter accedere ai servizi del sito</h4>
-    <form method="POST" action="sottoscrivi.php">
+    <form name="form" method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>">
   <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <label for="email" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="email">
+      <input type="email" name="email" class="form-control" id="email">
     </div>
   </div>
   <div class="row mb-3">
-    <label for="inputAlias3" class="col-sm-2 col-form-label">Alias</label>
+    <label for="alias" class="col-sm-2 col-form-label">Alias</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="alias">
+      <input type="text" name="alias" class="form-control" id="alias">
     </div>
   </div>
   <div class="row mb-3">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <label for="password" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="password">
+      <input type="password" class="form-control" id="password" name="password">
     </div>
   </div>
   <fieldset class="row mb-3">
     <legend class="col-form-label col-sm-2 pt-0">Come desideri essere contattato in futuro ?</legend>
     <div class="col-sm-10">
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="sms" id="sms" value="sms" checked>
+        <input class="form-check-input" type="radio" name="marketing" id="sms" value="sms">
         <label class="form-check-label" for="sms">
           contattato via SMS
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="whatsapp" id="whatsapp" value="whatsapp">
+        <input class="form-check-input" type="radio" name="marketing" id="whatsapp" value="whatsapp">
         <label class="form-check-label" for="whatsapp">
           Contattato via whatsapp
         </label>
       </div>
       <div class="form-check disabled">
-        <input class="form-check-input" type="radio" name="via-email" id="via-email" value="via-email" disabled>
+        <input class="form-check-input" type="radio" name="marketing" id="via-email" value="via-email">
         <label class="form-check-label" for="via-email">
           Contattato via email
         </label>
@@ -65,7 +65,7 @@ $alias = $_POST['alias'];
   <div class="row mb-3">
     <div class="col-sm-10 offset-sm-2">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="privacy">
+        <input class="form-check-input" type="checkbox" id="privacy" name="privacy" value="privacy">
         <label class="form-check-label" for="privacy">
           Ho letto e preso visione della normativa <a href="privacy.php">Privacy</a>
         </label>
@@ -73,7 +73,7 @@ $alias = $_POST['alias'];
     </div>
   </div>
   <input type="hidden" name="register" value="register">
-  <button type="submit" class="btn btn-primary">Sottoscrivi</button>
+  <button type="submit" name="submit" class="btn btn-primary">Sottoscrivi</button>
 </form>
 <p><?php echo $alias; ?></p>
     </div>
